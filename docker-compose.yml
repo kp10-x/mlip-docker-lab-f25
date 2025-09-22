@@ -9,8 +9,6 @@ services:
     # TODO: Use the shared volume to store the trained model
     volumes:
       - model_storage: 
-    # TODO: Set the command to run the training script
-    command:
     # Set it to restart when it fails
     restart: on-failure
 
