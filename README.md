@@ -48,11 +48,20 @@ Docker Compose is a tool that allows you to define and manage multi-container Do
 We provide a template for a `docker-compose.yml` file for the two containers. Set it up so that both services start, share the model file through a shared volume, and exposes a port for inference. You should be able to run the entire thing with `docker compose up --build`.
 
 
-## Step 4: Logs
+## Step 4: Logs and Debugging
 
 Check logs of the running containers, see https://docs.docker.com/reference/cli/docker/container/logs/
 
 You should be able to see results from successful and failed requests.
+
+### Debugging with Docker exec
+
+If you need to debug issues inside a running container, you can access the container's shell:
+
+- For docker-compose services, use `docker compose exec` with the service name
+- Reference: [Docker exec documentation](https://docs.docker.com/engine/reference/commandline/exec/)
+
+Once inside the container, you can check if model files exist in the mounted volume
 
 
 ## Additional resources 
