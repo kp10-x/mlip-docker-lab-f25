@@ -14,7 +14,7 @@ docker run hello-world
 
 ## Step 1: Containerize training the Machine Learning Model
 
-Create a docker container for the training code. Then launched, the container should run the training script and store the model file to a shared volume. You can use the partially completed Dockerfile and code in directory train
+Create a docker container for the training code. When launched, the container should run the training script and store the model file to a shared volume. You can use the partially completed Dockerfile and code in directory train
 
 The dockerfile is already nearly complete. Ensure it:
 - Copy `requirements.txt` and install dependencies
